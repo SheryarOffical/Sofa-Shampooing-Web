@@ -82,7 +82,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h2 className="reveal reveal-delay-3" style={{ fontSize: 'clamp(13px, 1vw, 15px)', fontWeight: 500, color: 'rgba(255,255,255,0.92)', maxWidth: 480, lineHeight: 1.7, marginBottom: 24, fontFamily: 'var(--font-sans)', textShadow: '0 1px 6px rgba(0,0,0,0.65)' }}>
+          <h2 className="reveal reveal-delay-3" style={{ fontSize: 'clamp(15px, 1.25vw, 19px)', fontWeight: 600, color: '#FFF8E7', maxWidth: 520, lineHeight: 1.75, marginBottom: 24, fontFamily: 'var(--font-sans)', textShadow: '0 2px 12px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)', letterSpacing: '0.01em' }}>
             Al Haya Sofa Care UAE brings <em style={{ fontFamily: 'var(--font-serif)', color: '#89CFF0', fontStyle: 'italic', fontWeight: 600 }}>professional sofa cleaning</em> to your doorstep in Dubai, Sharjah &amp; Ajman. Advanced equipment, eco-friendly solutions, fast-dry results.
           </h2>
 
