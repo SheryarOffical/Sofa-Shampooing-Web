@@ -39,13 +39,24 @@ export default function Hero() {
   return (
     <section id="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', borderBottom: '1px solid var(--line)', background: '#0B0B0B' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: '#0B0B0B' }}>
+        {/* Mobile: show image only (saves 2.6MB video download) */}
+        <img
+          src="/hero-sofa.webp"
+          alt="Professional sofa deep shampoo and steam cleaning service at home in Dubai UAE — Al Haya Sofa Care"
+          fetchPriority="high"
+          decoding="async"
+          className="hero-img-mobile"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+        />
+        {/* Desktop: show video */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           poster="/hero-sofa.webp"
+          className="hero-video-desktop"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
         >
           <source src="/hero-bg.webm" type="video/webm" />

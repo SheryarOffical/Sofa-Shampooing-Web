@@ -3,6 +3,7 @@ import Link from 'next/link';
 const areas = [
   {
     city: 'Dubai',
+    href: '/sofa-cleaning-dubai',
     emoji: '🏙️',
     desc: 'All Dubai areas — Marina, JVC, Downtown, Deira, Bur Dubai, Jumeirah, Palm Jumeirah & more.',
     tags: ['Marina', 'JVC', 'Downtown', 'Jumeirah', 'Deira'],
@@ -11,6 +12,7 @@ const areas = [
   },
   {
     city: 'Abu Dhabi',
+    href: '/sofa-cleaning-abu-dhabi',
     emoji: '🌃',
     desc: 'Serving all Abu Dhabi areas — Khalifa City, Al Reem Island, Yas Island, Saadiyat Island & Al Muroor.',
     tags: ['Khalifa City', 'Al Reem Island', 'Yas Island', 'Al Muroor'],
@@ -19,6 +21,7 @@ const areas = [
   },
   {
     city: 'Sharjah',
+    href: '/sofa-cleaning-sharjah',
     emoji: '🌆',
     desc: 'Covering all Sharjah neighborhoods — Al Nahda, Al Majaz, Al Qasimia & surrounding areas.',
     tags: ['Al Nahda', 'Al Majaz', 'Al Qasimia', 'Muwaileh'],
@@ -27,6 +30,7 @@ const areas = [
   },
   {
     city: 'Ajman',
+    href: '/sofa-cleaning-ajman',
     emoji: '🏘️',
     desc: 'Full coverage in Ajman — Al Nuaimiya, Al Rashidiya, Al Jurf & all residential areas.',
     tags: ['Al Nuaimiya', 'Al Rashidiya', 'Al Jurf', 'Al Hamidiya'],
@@ -127,14 +131,23 @@ export default function CoverageSection() {
                 ))}
               </div>
 
-              {/* Bottom status */}
+              {/* Bottom status + link */}
               <div style={{
                 marginTop: 24, paddingTop: 16,
                 borderTop: `1px solid ${area.accent}20`,
-                display: 'flex', alignItems: 'center', gap: 8,
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8,
               }}>
-                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#25D366', display: 'inline-block', flexShrink: 0 }}/>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'rgba(246,241,232,0.5)' }}>Same-day service available</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#25D366', display: 'inline-block', flexShrink: 0 }}/>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'rgba(246,241,232,0.5)' }}>Same-day available</span>
+                </div>
+                <Link href={area.href} style={{
+                  fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600,
+                  color: area.accent, textDecoration: 'none',
+                  padding: '4px 10px', borderRadius: 6,
+                  border: `1px solid ${area.accent}40`,
+                  background: `${area.accent}10`,
+                }}>View Page →</Link>
               </div>
             </div>
           ))}

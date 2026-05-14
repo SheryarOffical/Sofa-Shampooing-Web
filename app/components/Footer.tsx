@@ -46,6 +46,23 @@ export default function Footer() {
           </div>
 
           <div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--accent)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 14 }}>Locations</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+              {[
+                { href: '/sofa-cleaning-dubai', label: '📍 Sofa Cleaning Dubai' },
+                { href: '/sofa-cleaning-abu-dhabi', label: '📍 Sofa Cleaning Abu Dhabi' },
+                { href: '/sofa-cleaning-sharjah', label: '📍 Sofa Cleaning Sharjah' },
+                { href: '/sofa-cleaning-ajman', label: '📍 Sofa Cleaning Ajman' },
+              ].map((l) => (
+                <Link key={l.href} href={l.href} style={{ color: 'var(--fg-muted)', fontSize: 13 }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--fg)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--fg-muted)')}
+                >{l.label}</Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--accent)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 14 }}>Contact</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <a href="tel:+971547199189" style={{ color: 'var(--fg-muted)', fontSize: 13 }}>📞 +971 54 719 9189</a>

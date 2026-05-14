@@ -3,37 +3,37 @@ export default function ServiceCoverageSection() {
   const cities = [
     {
       city: 'Dubai', count: '20+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=65&auto=format',
       color: 'var(--accent)',
       areas: ['JVC', 'Downtown', 'Business Bay', 'Marina', 'JBR', 'Al Barsha', 'Jumeirah', 'Deira', 'Palm Jumeirah', 'Dubai Hills', 'Silicon Oasis', 'Mirdif'],
     },
     {
       city: 'Abu Dhabi', count: '8+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=500&q=65&auto=format',
       color: '#8B5CF6',
       areas: ['Al Khalidiyah', 'Al Reem Island', 'Khalifa City', 'Yas Island', 'Saadiyat Island', 'Al Mushrif', 'Al Muroor', 'Corniche'],
     },
     {
       city: 'Sharjah', count: '10+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=500&q=65&auto=format',
       color: '#0891B2',
       areas: ['Al Nahda', 'Al Qasimia', 'Al Majaz', 'Al Taawun', 'Muwaileh', 'Al Khan', 'University City', 'Al Mareija'],
     },
     {
       city: 'Ajman', count: '8+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=500&q=65&auto=format',
       color: '#F59E0B',
       areas: ['Al Nuaimia', 'Al Rashidiya', 'Al Jurf', 'Al Hamidiya', 'Emirates City', 'Al Bustan', 'Al Mowaihat', 'Al Rumailah'],
     },
     {
       city: 'Ras Al Khaimah', count: '5+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?w=500&q=65&auto=format',
       color: '#059669',
       areas: ['RAK City', 'Al Hamra Village', 'Mina Al Arab', 'Al Nakheel', 'Al Rams', 'Khuzam'],
     },
     {
       city: 'Fujairah & UAQ', count: '4+', label: 'Areas Covered',
-      img: 'https://images.unsplash.com/photo-1586611292717-f828b167408c?w=800&q=80',
+      img: 'https://images.unsplash.com/photo-1586611292717-f828b167408c?w=500&q=65&auto=format',
       color: '#EC4899',
       areas: ['Fujairah City', 'Al Faseel', 'UAQ City', 'Khor Fakkan', 'Dibba', 'Al Gurfa'],
     },
