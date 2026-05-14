@@ -55,11 +55,18 @@ export default function ServicesPage() {
             </div>
             <div className="section-tag">Our Services</div>
             <h1 className="reveal" style={{ fontSize: 'clamp(36px, 6vw, 80px)', lineHeight: 1.0, marginBottom: 20 }}>
-              Professional <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Sofa Cleaning</span><br/>Services in Dubai
+              Professional Sofa Deep <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Shampoo &amp; Steam</span><br/>Cleaning Services in UAE
             </h1>
-            <p className="reveal reveal-delay-1" style={{ color: 'var(--fg-muted)', fontSize: 18, maxWidth: 580, lineHeight: 1.65 }}>
-              Expert upholstery cleaning at your doorstep across Dubai, Sharjah &amp; Ajman. Advanced equipment, eco-safe solutions, guaranteed results.
+            <p className="reveal reveal-delay-1" style={{ color: 'var(--fg-muted)', fontSize: 18, maxWidth: 620, lineHeight: 1.65 }}>
+              Restore the beauty and hygiene of your furniture today. Al Haya Sofa Care UAE provides the most thorough sofa deep shampoo and steam cleaning services across Dubai, Sharjah, Ajman &amp; Abu Dhabi — ensuring your sofa looks brand new and stays germ-free.
             </p>
+            <div className="reveal reveal-delay-2" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
+              {['Dubai', 'Sharjah', 'Ajman', 'Abu Dhabi', 'Al Ain', 'RAK'].map((city) => (
+                <span key={city} style={{ padding: '5px 14px', borderRadius: 999, fontFamily: 'var(--font-mono)', fontSize: 11, background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)' }}>
+                  📍 {city}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -73,11 +80,14 @@ export default function ServicesPage() {
                   <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', marginBottom: 16 }}>
                     Sofa <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Deep Cleaning</span> Dubai
                   </h2>
-                  <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.7, marginBottom: 24 }}>
-                    If your sofa has become dusty, stained, or develops an unpleasant smell, you no longer need to replace the fabric. Al Haya Sofa Care UAE arrives at your home within hours with all the professional tools needed to deep clean and dry your sofa — restoring it to a fresh, hygienic condition.
+                  <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.7, marginBottom: 20 }}>
+                    Is your sofa looking dull, stained, or smelling a bit off? Over time, sofas collect dust mites, allergens, and deep-seated grime that a regular vacuum simply cannot reach. Al Haya Sofa Care UAE provides the most thorough sofa deep shampoo cleaning and steam cleaning services in UAE, ensuring your furniture looks brand new and stays germ-free.
+                  </p>
+                  <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.7, marginBottom: 20 }}>
+                    Your sofa is one of the most used items in your home. Whether it&apos;s coffee spills, pet hair, or everyday dust, upholstery fabric acts like a filter for pollutants. Our professional sofa cleaning process goes beyond the surface to eliminate deep-rooted bacteria and allergens, stubborn food and liquid stains, unpleasant odors and pet smells, and dust mites that cause respiratory issues.
                   </p>
                   <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
-                    Using advanced equipment and fabric-safe solutions, we deep clean your sofa on-site, carefully treating each cushion and corner. Stain treatment, odor control, and gentle handling ensure your upholstery is cleaned thoroughly without damage.
+                    We combine two of the most effective techniques: premium eco-friendly shampoos that break down grease and lift heavy stains without damaging the fabric, plus industrial-grade high-temperature steam that penetrates deep into the cushions, killing 99.9% of bacteria and germs.
                   </p>
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
                     {['sofa cleaning Dubai', 'leather sofa cleaning', 'sofa stain removal', 'pet hair removal', 'fabric sofa cleaning', 'same day service'].map((kw) => (

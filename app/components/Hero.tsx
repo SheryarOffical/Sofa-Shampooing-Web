@@ -41,8 +41,7 @@ export default function Hero() {
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: '#0B0B0B' }}>
         <img
           src="/hero-sofa.webp"
-          alt=""
-          aria-hidden="true"
+          alt="Professional sofa deep shampoo and steam cleaning service at home in Dubai UAE — Al Haya Sofa Care"
           fetchPriority="high"
           decoding="async"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 1 }}

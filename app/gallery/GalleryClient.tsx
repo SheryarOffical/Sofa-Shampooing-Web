@@ -9,12 +9,12 @@ import ServiceCoverageSection from '../components/ServiceCoverageSection';
 const categories = ['All', 'Sofa Cleaning', 'Stain Removal', 'Leather', 'Shampooing'];
 
 const galleryItems = [
-  { id: 1, cat: 'Sofa Cleaning', label: '3-Seater Sofa — Before & After', before: '/3seater/before.webp', after: '/3seater/after.webp' },
-  { id: 2, cat: 'Stain Removal', label: 'Coffee Stain Removal — JVC', before: '/coffee/before.webp', after: '/coffee/after.webp' },
-  { id: 3, cat: 'Leather', label: 'Leather Sofa Deep Clean — Business Bay', before: '/leather/before.webp', after: '/leather/after.webp' },
-  { id: 4, cat: 'Shampooing', label: 'Fabric Shampoo — Sharjah', before: '/shampoo/before.webp', after: '/shampoo/after.webp' },
-  { id: 5, cat: 'Sofa Cleaning', label: 'L-Shaped Sofa — Downtown Dubai', before: '/L-shape/before.webp', after: '/L-shape/after.webp' },
-  { id: 6, cat: 'Stain Removal', label: 'Pet Stain Removal — Ajman', before: '/pet-stain/before.webp', after: '/pet-stain/after.webp' },
+  { id: 1, cat: 'Sofa Cleaning', label: '3-Seater Sofa — Before & After', altBefore: 'Dirty 3-seater sofa before professional deep shampoo cleaning in Dubai UAE', altAfter: 'Clean 3-seater sofa after professional deep shampoo cleaning in Dubai UAE by Al Haya Sofa Care', before: '/3seater/before.webp', after: '/3seater/after.webp' },
+  { id: 2, cat: 'Stain Removal', label: 'Coffee Stain Removal — JVC', altBefore: 'Sofa with coffee stain before removal — JVC Dubai', altAfter: 'Sofa after coffee stain removal in JVC Dubai — Al Haya Sofa Care UAE', before: '/coffee/before.webp', after: '/coffee/after.webp' },
+  { id: 3, cat: 'Leather', label: 'Leather Sofa Deep Clean — Business Bay', altBefore: 'Dirty leather sofa before deep cleaning in Business Bay Dubai', altAfter: 'Restored leather sofa after deep cleaning in Business Bay Dubai — Al Haya', before: '/leather/before.webp', after: '/leather/after.webp' },
+  { id: 4, cat: 'Shampooing', label: 'Fabric Shampoo — Sharjah', altBefore: 'Fabric sofa before professional shampoo cleaning in Sharjah UAE', altAfter: 'Fresh fabric sofa after professional shampoo cleaning in Sharjah — Al Haya Sofa Care', before: '/shampoo/before.webp', after: '/shampoo/after.webp' },
+  { id: 5, cat: 'Sofa Cleaning', label: 'L-Shaped Sofa — Downtown Dubai', altBefore: 'L-shaped sofa before deep cleaning in Downtown Dubai', altAfter: 'Clean L-shaped sofa after deep cleaning in Downtown Dubai — Al Haya', before: '/L-shape/before.webp', after: '/L-shape/after.webp' },
+  { id: 6, cat: 'Stain Removal', label: 'Pet Stain Removal — Ajman', altBefore: 'Sofa with pet stain before cleaning in Ajman UAE', altAfter: 'Sofa after pet stain removal in Ajman UAE — Al Haya Sofa Care', before: '/pet-stain/before.webp', after: '/pet-stain/after.webp' },
 ];
 
 function GalleryCard({ item }: { item: typeof galleryItems[0] }) {
@@ -25,7 +25,7 @@ function GalleryCard({ item }: { item: typeof galleryItems[0] }) {
       <div style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}>
         <img
           src={showAfter ? item.after : item.before}
-          alt={item.label}
+          alt={showAfter ? item.altAfter : item.altBefore}
           style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.4s' }}
         />
         <div style={{ position: 'absolute', top: 12, left: 12, display: 'flex', gap: 8 }}>

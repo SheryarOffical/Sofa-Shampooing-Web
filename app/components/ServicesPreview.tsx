@@ -234,7 +234,7 @@ export default function ServicesPreview() {
             >
               {('bgImage' in s && s.bgImage) && (
                 <>
-                  <Image src={s.bgImage} alt={s.title} fill loading={i < 2 ? 'eager' : 'lazy'} sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover', zIndex: 0 }} />
+                  <Image src={s.bgImage} alt={`${s.title} in Dubai UAE — Al Haya Sofa Care professional at-home service`} fill loading={i < 2 ? 'eager' : 'lazy'} sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover', zIndex: 0 }} />
                   <div className="card-overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(rgba(11,11,11,0.55), rgba(11,11,11,0.65))", zIndex: 1 }} />
                 </>
               )}

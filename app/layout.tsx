@@ -30,24 +30,24 @@ const fontSerif = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL('https://sofashampooingdubai.com'),
   title: {
-    default: 'Sofa Cleaning Dubai | Sofa Shampooing Dubai | Al Haya Sofa Care UAE',
-    template: '%s | Al Haya Sofa Cleaning Dubai',
+    default: 'Sofa Cleaning Dubai | Sofa Deep Shampoo & Steam Cleaning UAE | Al Haya',
+    template: '%s | Al Haya Sofa Care UAE',
   },
-  description: 'Al Haya Sofa Care UAE — #1 sofa cleaning & shampooing in Dubai, Sharjah & Ajman. Professional sofa deep cleaning, stain removal, leather care, pet hair removal. Same-day service. Call +971547199189.',
+  description: 'Al Haya Sofa Care UAE — Professional sofa deep shampoo & steam cleaning in Dubai, Sharjah, Ajman & Abu Dhabi. Stain removal, leather care, pet hair removal, same-day at-home service. Call +971547199189.',
   keywords: [
+    // Dubai — primary
     'sofa cleaning Dubai',
     'sofa shampooing Dubai',
     'sofa deep cleaning Dubai',
-    'sofa cleaning Sharjah',
-    'sofa cleaning Ajman',
+    'sofa deep shampoo cleaning Dubai',
+    'sofa steam cleaning Dubai',
     'upholstery cleaning Dubai',
     'couch cleaning Dubai',
     'sofa stain removal Dubai',
     'leather sofa cleaning Dubai',
     'sofa cleaning near me Dubai',
     'best sofa cleaning Dubai',
-    'cheap sofa cleaning Dubai',
-    'professional sofa cleaning UAE',
+    'professional sofa cleaning Dubai',
     'at home sofa cleaning Dubai',
     'same day sofa cleaning Dubai',
     'fabric sofa cleaning Dubai',
@@ -57,7 +57,6 @@ export const metadata: Metadata = {
     'pet hair removal sofa Dubai',
     'sofa washing service Dubai',
     'sofa cleaning price Dubai',
-    'Al Haya Sofa Care UAE',
     'sofa cleaning JVC Dubai',
     'sofa cleaning Downtown Dubai',
     'sofa cleaning Business Bay',
@@ -65,8 +64,49 @@ export const metadata: Metadata = {
     'sofa cleaning Bur Dubai',
     'sofa cleaning Al Barsha',
     'sofa cleaning Jumeirah',
+    'sofa cleaning Marina Dubai',
+    'sofa cleaning Palm Jumeirah',
+    'sofa cleaning Dubai Hills',
+    // Sharjah
+    'sofa cleaning Sharjah',
+    'sofa shampooing Sharjah',
+    'sofa deep cleaning Sharjah',
+    'upholstery cleaning Sharjah',
+    'sofa steam cleaning Sharjah',
+    'sofa cleaning Al Nahda Sharjah',
+    'sofa cleaning Muwaileh Sharjah',
+    // Ajman
+    'sofa cleaning Ajman',
+    'sofa deep cleaning Ajman',
+    'sofa shampooing Ajman',
+    'upholstery cleaning Ajman',
+    // Abu Dhabi
+    'sofa cleaning Abu Dhabi',
+    'sofa deep cleaning Abu Dhabi',
+    'sofa shampooing Abu Dhabi',
+    'sofa steam cleaning Abu Dhabi',
+    'sofa sanitization Abu Dhabi',
+    'upholstery cleaning Abu Dhabi',
+    'sofa cleaning Khalifa City',
+    'sofa cleaning Al Reem Island',
+    'sofa cleaning Yas Island',
+    // Al Ain & RAK
+    'sofa cleaning Al Ain',
+    'sofa cleaning Ras Al Khaimah',
+    'sofa cleaning RAK',
+    // General UAE
+    'sofa deep shampoo cleaning UAE',
+    'sofa steam cleaning UAE',
+    'professional sofa cleaning UAE',
+    'best sofa cleaning UAE',
+    'Al Haya Sofa Care UAE',
+    'sofa cleaning service UAE',
+    // Arabic keywords
     'تنظيف كنب دبي',
     'غسيل كنب دبي',
+    'تنظيف كنب ابوظبي',
+    'تنظيف كنب الشارقة',
+    'تنظيف انتريه دبي',
   ],
   authors: [{ name: 'Al Haya Sofa Care UAE', url: 'https://sofashampooingdubai.com' }],
   creator: 'Al Haya Sofa Care UAE',
@@ -77,24 +117,27 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   openGraph: {
-    title: 'Sofa Cleaning Dubai | Al Haya Sofa Care UAE',
-    description: 'Professional sofa deep cleaning & shampooing in Dubai, Sharjah & Ajman. Same-day service, eco-friendly, at-home. Starting from AED 79. Call +971547199189.',
+    title: 'Sofa Deep Shampoo & Steam Cleaning UAE | Al Haya Sofa Care',
+    description: 'Professional sofa deep shampoo & steam cleaning in Dubai, Sharjah, Ajman & Abu Dhabi. Same-day at-home service, eco-friendly, starting AED 79. Call +971547199189.',
     url: 'https://sofashampooingdubai.com',
-    siteName: 'Al Haya Sofa Cleaning Dubai',
+    siteName: 'Al Haya Sofa Care UAE',
     locale: 'en_AE',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Al Haya Sofa Cleaning Dubai' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Al Haya Sofa Deep Cleaning UAE — Professional At-Home Service' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sofa Cleaning Dubai | Al Haya Sofa Care UAE',
-    description: 'Professional sofa cleaning & shampooing in Dubai. Same-day service. Call +971547199189.',
+    title: 'Sofa Deep Shampoo & Steam Cleaning UAE | Al Haya',
+    description: 'Professional sofa cleaning in Dubai, Sharjah, Ajman & Abu Dhabi. Same-day service. Call +971547199189.',
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://sofashampooingdubai.com',
   },
   verification: {
-    google: 'google-site-verification-code-here',
+    // TODO: Replace with your actual Google Search Console verification code
+    // Get it from: https://search.google.com/search-console → Add property → HTML tag method
+    google: '0A5EubbkI_w7hewd0KWmtwVyVIVpTHiIDuCm4brgHoQ',
   },
 };
 
@@ -103,8 +146,12 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://sofashampooingdubai.com',
   name: 'Al Haya Sofa Care UAE',
-  alternateName: 'Al Haya Sofa Cleaning Dubai',
-  description: 'Professional sofa cleaning, shampooing, stain removal, leather care, and upholstery cleaning services in Dubai, Sharjah and Ajman UAE.',
+  alternateName: [
+    'Al Haya Sofa Cleaning Dubai',
+    'Al Haya Cleaning Services UAE',
+    'Alhaya Sofa Care',
+  ],
+  description: 'Professional sofa deep shampoo & steam cleaning services across UAE. Specializing in sofa cleaning, stain removal, leather care, pet hair removal and upholstery sanitization in Dubai, Sharjah, Ajman, Abu Dhabi, Al Ain and Ras Al Khaimah.',
   url: 'https://sofashampooingdubai.com',
   telephone: '+971547199189',
   email: 'info@sofashampooingdubai.com',
@@ -127,20 +174,26 @@ const localBusinessSchema = {
   },
   geo: { '@type': 'GeoCoordinates', latitude: 25.2048, longitude: 55.2708 },
   areaServed: [
-    { '@type': 'City', name: 'Dubai' },
-    { '@type': 'City', name: 'Sharjah' },
-    { '@type': 'City', name: 'Ajman' },
+    { '@type': 'City', name: 'Dubai', '@id': 'https://www.wikidata.org/wiki/Q612' },
+    { '@type': 'City', name: 'Sharjah', '@id': 'https://www.wikidata.org/wiki/Q182888' },
+    { '@type': 'City', name: 'Ajman', '@id': 'https://www.wikidata.org/wiki/Q171677' },
+    { '@type': 'City', name: 'Abu Dhabi', '@id': 'https://www.wikidata.org/wiki/Q61750' },
+    { '@type': 'City', name: 'Al Ain' },
+    { '@type': 'City', name: 'Ras Al Khaimah' },
+    { '@type': 'Country', name: 'United Arab Emirates' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Sofa Cleaning Services Dubai',
+    name: 'Sofa Cleaning Services UAE',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Deep Cleaning Dubai', description: 'Professional deep cleaning for all sofa types' }, price: '99', priceCurrency: 'AED' },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Shampooing Dubai', description: 'Foam shampoo treatment with quick dry technology' }, price: '79', priceCurrency: 'AED' },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Stain Removal Dubai', description: 'Coffee, food, ink and pet stain removal' }, price: '49', priceCurrency: 'AED' },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Leather Sofa Cleaning Dubai', description: 'Specialist leather care and conditioning' }, price: '129', priceCurrency: 'AED' },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pet Hair Removal Dubai', description: 'Deep pet hair extraction from all fabrics' }, price: '39', priceCurrency: 'AED' },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Sanitization Dubai', description: 'Hospital-grade disinfection service' }, price: '49', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Deep Cleaning UAE', description: 'Professional deep shampoo cleaning for all sofa types across UAE' }, price: '99', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Shampooing UAE', description: 'Professional foam shampoo treatment with quick dry technology' }, price: '79', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Steam Cleaning UAE', description: 'High-temperature steam cleaning that kills 99.9% of bacteria and germs' }, price: '89', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Stain Removal UAE', description: 'Coffee, food, ink and pet stain removal from all upholstery types' }, price: '49', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Leather Sofa Cleaning UAE', description: 'Specialist pH-safe leather care and conditioning' }, price: '129', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pet Hair Removal UAE', description: 'Deep pet hair extraction from all fabric types' }, price: '39', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sofa Sanitization UAE', description: 'Hospital-grade disinfection service — 99.9% bacteria removal' }, price: '49', priceCurrency: 'AED' },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Velvet & Microfiber Sofa Cleaning UAE', description: 'Specialist cleaning for delicate velvet and microfiber upholstery' }, price: '99', priceCurrency: 'AED' },
     ],
   },
   aggregateRating: {
@@ -151,8 +204,9 @@ const localBusinessSchema = {
     worstRating: '1',
   },
   review: [
-    { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Ahmed Al Mansouri' }, reviewBody: 'Best sofa cleaning service in Dubai. My sofa looks brand new!' },
-    { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Sarah Johnson' }, reviewBody: 'Amazing results! Removed all stains from my leather sofa.' },
+    { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Ahmed Al Mansouri' }, reviewBody: 'Best sofa cleaning service in Dubai. My sofa looks brand new after Al Haya deep cleaned it!' },
+    { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Sarah Johnson' }, reviewBody: 'Amazing results! They removed all stains from my leather sofa in Abu Dhabi. Highly recommended.' },
+    { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5' }, author: { '@type': 'Person', name: 'Mohammad Al Hashimi' }, reviewBody: 'Quick same-day service in Sharjah. The sofa shampoo cleaning was thorough and smells fresh.' },
   ],
   sameAs: [
     'https://wa.me/971547199189',
@@ -164,11 +218,46 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'How much does sofa cleaning cost in Dubai?', acceptedAnswer: { '@type': 'Answer', text: 'Sofa cleaning in Dubai starts from AED 39 for pet hair removal, AED 79 for shampooing, and AED 99 for deep cleaning. Leather sofa cleaning starts from AED 129.' } },
-    { '@type': 'Question', name: 'How long does sofa cleaning take in Dubai?', acceptedAnswer: { '@type': 'Answer', text: 'Most sofa cleaning jobs take 1-3 hours. Your sofa will be dry and ready to use within 2-4 hours after shampooing.' } },
-    { '@type': 'Question', name: 'Do you offer same-day sofa cleaning in Dubai?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE offers same-day sofa cleaning across Dubai, Sharjah and Ajman. WhatsApp us at +971547199189 to book.' } },
-    { '@type': 'Question', name: 'Which areas in Dubai do you cover for sofa cleaning?', acceptedAnswer: { '@type': 'Answer', text: 'We cover all areas of Dubai including JVC, Downtown Dubai, Business Bay, Al Barsha, Jumeirah, Deira, Bur Dubai, Marina, JBR, and all of Sharjah and Ajman.' } },
-    { '@type': 'Question', name: 'Are your sofa cleaning products safe for children and pets?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, all our cleaning products are eco-friendly, non-toxic and completely safe for children and pets.' } },
+    {
+      '@type': 'Question',
+      name: 'How much does sofa cleaning cost in Dubai?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sofa cleaning in Dubai starts from AED 39 for pet hair removal, AED 79 for shampooing, AED 89 for steam cleaning, and AED 99 for deep cleaning. Leather sofa cleaning starts from AED 129. All prices include at-home doorstep service.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer sofa cleaning in Abu Dhabi?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE provides professional sofa deep shampoo and steam cleaning services across Abu Dhabi including Khalifa City, Al Reem Island, Yas Island, Saadiyat Island, Al Muroor and more. WhatsApp +971547199189 to book.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does sofa cleaning take in UAE?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most sofa cleaning jobs take 1-3 hours depending on the size. Your sofa will be dry and ready to use within 2-4 hours after shampooing or steam cleaning.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer same-day sofa cleaning across UAE?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE offers same-day sofa cleaning across Dubai, Sharjah, Ajman, Abu Dhabi, Al Ain and Ras Al Khaimah. WhatsApp us at +971547199189 to book your same-day slot.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which areas in Dubai do you cover for sofa cleaning?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We cover all areas of Dubai including JVC, Downtown Dubai, Business Bay, Al Barsha, Jumeirah, Deira, Bur Dubai, Dubai Marina, JBR, Palm Jumeirah, Dubai Hills, Silicon Oasis, and Mirdif.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between sofa shampoo cleaning and steam cleaning?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sofa shampoo cleaning uses professional foam shampoo to lift embedded dirt and stains from fabric fibers — ideal for general deep cleaning. Steam cleaning uses high-temperature vapor to sanitize and disinfect, killing 99.9% of bacteria and germs — ideal for hygiene-focused cleaning or homes with babies and pets. Al Haya Sofa Care UAE offers both methods and can combine them for best results.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are your sofa cleaning products safe for children and pets?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, all our cleaning products are eco-friendly, non-toxic and completely safe for children and pets. We use premium, biodegradable shampoos specifically formulated for delicate upholstery fabrics.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you clean leather sofas in UAE?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer specialist leather sofa cleaning using pH-balanced solutions, deep conditioning and protective coating to restore and preserve your leather sofa. Service available across Dubai, Sharjah, Ajman and Abu Dhabi starting from AED 129.' },
+    },
   ],
 };
 
@@ -183,9 +272,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#0B0B0B" />
         <meta name="geo.region" content="AE-DU" />
-        <meta name="geo.placename" content="Dubai" />
+        <meta name="geo.placename" content="Dubai, United Arab Emirates" />
         <meta name="geo.position" content="25.2048;55.2708" />
         <meta name="ICBM" content="25.2048, 55.2708" />
+        <meta name="coverage" content="United Arab Emirates" />
+        <meta name="target" content="all" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </head>
