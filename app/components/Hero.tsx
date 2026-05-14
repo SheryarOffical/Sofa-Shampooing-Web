@@ -48,13 +48,21 @@ export default function Hero() {
   return (
     <section id="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', borderBottom: '1px solid var(--line)', background: '#0B0B0B' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: '#0B0B0B' }}>
-        {/* Always show hero image (LCP element, SSR-friendly) */}
+        {/* Mobile: dedicated portrait image (768x1376, 83KB WebP) */}
         <img
-          src="/hero-sofa.webp"
-          alt="Professional sofa deep shampoo and steam cleaning service at home in Dubai UAE — Al Haya Sofa Care"
+          src="/hero-mobile.webp"
+          alt="Professional sofa cleaning service in Dubai UAE — Al Haya Sofa Care at-home deep cleaning"
           fetchPriority="high"
           decoding="sync"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: isDesktop ? 'none' : 'block' }}
+          loading="eager"
+          width={768}
+          height={1376}
+          style={{
+            position: 'absolute', inset: 0,
+            width: '100%', height: '100%',
+            objectFit: 'cover', objectPosition: 'center top',
+            display: isDesktop ? 'none' : 'block',
+          }}
         />
         {/* Desktop only: video (never rendered on mobile — prevents 3.5MB download) */}
         {isDesktop && (
