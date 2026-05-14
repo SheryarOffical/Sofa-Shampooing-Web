@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -23,10 +23,31 @@ const navLinks = [
   { href: '/contact', label: 'Contact', icon: '📞' },
 ];
 
+const locationLinks = [
+  { href: '/sofa-cleaning-dubai', label: 'Dubai', flag: '🏙️' },
+  { href: '/sofa-cleaning-sharjah', label: 'Sharjah', flag: '🌆' },
+  { href: '/sofa-cleaning-ajman', label: 'Ajman', flag: '🌇' },
+  { href: '/sofa-cleaning-abu-dhabi', label: 'Abu Dhabi', flag: '🕌' },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [locOpen, setLocOpen] = useState(false);
+  const [mobileLocOpen, setMobileLocOpen] = useState(false);
+  const locRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+
+  // Close location dropdown on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (locRef.current && !locRef.current.contains(e.target as Node)) {
+        setLocOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -82,6 +103,55 @@ export default function Navbar() {
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href} className={`nav-link${pathname === l.href ? ' active' : ''}`}>{l.label}</Link>
             ))}
+            {/* Locations Dropdown */}
+            <div ref={locRef} style={{ position: 'relative' }}>
+              <button
+                onClick={() => setLocOpen(!locOpen)}
+                className={`nav-link${locationLinks.some(l => pathname === l.href) ? ' active' : ''}`}
+                style={{
+                  background: 'none', border: 'none', cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', gap: 5,
+                  padding: 0, font: 'inherit',
+                }}
+              >
+                Locations
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  style={{ transform: locOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+                  <polyline points="2,4 6,8 10,4"/>
+                </svg>
+              </button>
+              {locOpen && (
+                <div style={{
+                  position: 'absolute', top: 'calc(100% + 12px)', left: '50%',
+                  transform: 'translateX(-50%)',
+                  background: '#141414', border: '1px solid var(--line)',
+                  borderRadius: 12, padding: '8px 0',
+                  minWidth: 180, boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+                  zIndex: 300,
+                }}>
+                  {locationLinks.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setLocOpen(false)}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 10,
+                        padding: '11px 18px',
+                        fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: 14,
+                        color: pathname === l.href ? 'var(--accent)' : 'var(--fg)',
+                        textDecoration: 'none',
+                        background: pathname === l.href ? 'color-mix(in srgb, var(--accent) 8%, transparent)' : 'transparent',
+                        transition: 'background 0.15s',
+                        borderLeft: pathname === l.href ? '3px solid var(--accent)' : '3px solid transparent',
+                      }}
+                    >
+                      <span style={{ fontSize: 16 }}>{l.flag}</span>
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Desktop Right: Phone + CTA */}
@@ -197,6 +267,51 @@ export default function Navbar() {
               )}
             </Link>
           ))}
+
+          {/* Locations Collapsible */}
+          <button
+            onClick={() => setMobileLocOpen(!mobileLocOpen)}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 14, width: '100%',
+              padding: '15px 24px', borderBottom: '1px solid var(--line)',
+              fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: 16,
+              color: locationLinks.some(l => pathname === l.href) ? 'var(--accent)' : 'var(--fg)',
+              background: locationLinks.some(l => pathname === l.href) ? 'color-mix(in srgb, var(--accent) 8%, transparent)' : 'transparent',
+              borderLeft: locationLinks.some(l => pathname === l.href) ? '3px solid var(--accent)' : '3px solid transparent',
+              cursor: 'pointer', border: 'none', borderBottom: '1px solid var(--line)',
+              textAlign: 'left',
+            }}
+          >
+            <span style={{ fontSize: 20 }}>📍</span>
+            Locations
+            <svg width="14" height="14" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+              style={{ marginLeft: 'auto', transform: mobileLocOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+              <polyline points="2,4 6,8 10,4"/>
+            </svg>
+          </button>
+          {mobileLocOpen && (
+            <div style={{ background: 'rgba(255,255,255,0.03)' }}>
+              {locationLinks.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 14,
+                    padding: '13px 24px 13px 48px',
+                    borderBottom: '1px solid var(--line)',
+                    fontFamily: 'var(--font-sans)', fontWeight: 400, fontSize: 15,
+                    color: pathname === l.href ? 'var(--accent)' : 'var(--fg-muted)',
+                    textDecoration: 'none',
+                    borderLeft: pathname === l.href ? '3px solid var(--accent)' : '3px solid transparent',
+                  }}
+                >
+                  <span style={{ fontSize: 18 }}>{l.flag}</span>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Drawer Footer — CTAs */}
