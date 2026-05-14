@@ -273,12 +273,14 @@ export default function Navbar() {
             onClick={() => setMobileLocOpen(!mobileLocOpen)}
             style={{
               display: 'flex', alignItems: 'center', gap: 14, width: '100%',
-              padding: '15px 24px', borderBottom: '1px solid var(--line)',
+              padding: '15px 24px',
+              borderTop: 'none', borderRight: 'none',
+              borderBottom: '1px solid var(--line)',
               fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: 16,
               color: locationLinks.some(l => pathname === l.href) ? 'var(--accent)' : 'var(--fg)',
               background: locationLinks.some(l => pathname === l.href) ? 'color-mix(in srgb, var(--accent) 8%, transparent)' : 'transparent',
               borderLeft: locationLinks.some(l => pathname === l.href) ? '3px solid var(--accent)' : '3px solid transparent',
-              cursor: 'pointer', border: 'none', borderBottom: '1px solid var(--line)',
+              cursor: 'pointer',
               textAlign: 'left',
             }}
           >
