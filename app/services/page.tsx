@@ -27,6 +27,30 @@ export const metadata: Metadata = {
     'sofa cleaning services Sharjah',
     'sofa cleaning services Ajman',
     'sofa cleaning price UAE',
+    // Service & technique long-tail
+    'steam sofa cleaning for dust mites Dubai',
+    'furniture deep cleaning for allergy sufferers Dubai',
+    'non-toxic sofa cleaning for homes with kids UAE',
+    'sofa sanitization and disinfection service Dubai',
+    'industrial power vacuuming for sofas Dubai',
+    'professional couch dry cleaning for delicate fabrics',
+    // Fabric-specific long-tail
+    'professional leather sofa cleaning and conditioning Dubai',
+    'microfiber couch deep cleaning service UAE',
+    'velvet sofa cleaning specialist Dubai',
+    'L-shaped sofa deep cleaning cost Dubai',
+    '7 seater sofa shampooing price UAE',
+    'safe cleaning for silk and wool upholstery Dubai',
+    // Problem-solving long-tail
+    'how to remove pet urine smell from sofa Dubai',
+    'professional coffee stain removal upholstery Dubai',
+    'emergency sofa cleaning red wine stains Dubai',
+    'sofa odor treatment cigarette smoke UAE',
+    'restoring old leather sofa shine Dubai',
+    // Intent-based
+    'compare sofa cleaning prices Dubai 2026',
+    'is professional sofa cleaning worth it Dubai',
+    'sofa fabric protection vs DIY sprays Dubai',
   ],
   alternates: { canonical: 'https://sofashampooingdubai.com/services' },
   openGraph: {

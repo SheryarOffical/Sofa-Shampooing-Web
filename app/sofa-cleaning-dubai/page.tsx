@@ -29,6 +29,27 @@ export const metadata: Metadata = {
     'couch cleaning Dubai',
     'at home sofa cleaning Dubai',
     'تنظيف كنب دبي',
+    // Hyper-local long-tail
+    'best sofa cleaning services in Dubai Marina',
+    'professional upholstery cleaning Business Bay Dubai',
+    'sofa deep cleaning price in JLT',
+    'eco-friendly sofa shampooing Palm Jumeirah',
+    'top-rated couch cleaners Arabian Ranches Dubai',
+    'same day sofa cleaning Al Barsha',
+    'sofa cleaning company Mirdif Dubai',
+    'professional furniture cleaning Downtown Dubai',
+    'sofa cleaning JBR Dubai',
+    'sofa cleaning Dubai Hills Estate',
+    'sofa cleaning Silicon Oasis Dubai',
+    // Service + location long-tail
+    'steam sofa cleaning for dust mites Dubai',
+    'furniture deep cleaning allergy sufferers Dubai',
+    'non-toxic sofa cleaning for kids Dubai',
+    'emergency sofa cleaning red wine stains Dubai',
+    'professional coffee stain removal upholstery Dubai',
+    'leather sofa cleaning and conditioning Dubai',
+    'microfiber sofa deep cleaning Dubai',
+    'L-shaped sofa deep cleaning Dubai',
   ],
   alternates: { canonical: 'https://sofashampooingdubai.com/sofa-cleaning-dubai' },
   openGraph: {
@@ -133,11 +154,17 @@ export default function SofaCleaningDubai() {
                 <h2 style={{ fontSize: 'clamp(26px, 3vw, 42px)', marginBottom: 20, lineHeight: 1.15 }}>
                   Why Your Dubai Sofa Needs <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'var(--accent)', fontWeight: 400 }}>Deep Cleaning</span>
                 </h2>
-                <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75, marginBottom: 20 }}>
-                  Dubai&apos;s dusty desert environment means sofas accumulate fine sand particles, dust mites and allergens far faster than in other climates. Air conditioning systems circulate this dust constantly, embedding it deep into sofa fibers. Regular vacuuming simply cannot reach these deep layers.
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: 'var(--accent)', marginBottom: 8 }}>Combatting Desert Dust</h3>
+                <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75, marginBottom: 16 }}>
+                  Dubai&apos;s micro-dust particles are incredibly fine. They settle deep into fabric fibers, acting like sandpaper that wears down your sofa over time. Air conditioning systems circulate this dust constantly — regular vacuuming cannot reach these deep layers.
                 </p>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: '#3B82F6', marginBottom: 8 }}>Allergen &amp; Bacteria Removal</h3>
+                <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75, marginBottom: 16 }}>
+                  Professional-grade extraction removes dust mites, pet dander and bacteria that standard household vacuums leave behind — essential for families with children or anyone with respiratory sensitivities.
+                </p>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: '#10B981', marginBottom: 8 }}>Stubborn Stain Removal</h3>
                 <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75, marginBottom: 28 }}>
-                  At Al Haya Sofa Care UAE, we use a powerful combination of professional foam shampoo cleaning and high-temperature steam cleaning — our 2-in-1 method that removes embedded dust, kills allergens, eliminates bacteria and restores your sofa&apos;s freshness. All at your home, with no need to move your furniture.
+                  Whether it&apos;s a coffee spill, pet accident or food stain, our technicians use pH-balanced cleaners tailored to your specific fabric type — lifting stains without causing discoloration or dye bleeding.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {[

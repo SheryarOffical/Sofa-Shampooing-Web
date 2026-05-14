@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
 
           <h2 className="reveal reveal-delay-3" style={{ fontSize: 'clamp(15px, 1.25vw, 19px)', fontWeight: 600, color: '#FFF8E7', maxWidth: 520, lineHeight: 1.75, marginBottom: 24, fontFamily: 'var(--font-sans)', textShadow: '0 2px 12px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9)', letterSpacing: '0.01em' }}>
-            Al Haya Sofa Care UAE brings <em style={{ fontFamily: 'var(--font-serif)', color: '#89CFF0', fontStyle: 'italic', fontWeight: 600 }}>professional sofa cleaning</em> to your doorstep in Dubai, Sharjah &amp; Ajman. Advanced equipment, eco-friendly solutions, fast-dry results.
+            In Dubai, desert dust, humidity &amp; daily use turn your sofa into a filter for allergens. Al Haya brings <em style={{ fontFamily: 'var(--font-serif)', color: '#89CFF0', fontStyle: 'italic', fontWeight: 600 }}>certified deep cleaning</em> directly to your doorstep — eco-friendly solutions, fast-dry results, same-day service across Dubai, Sharjah, Ajman &amp; Abu Dhabi.
           </h2>
 
           <div className="reveal reveal-delay-4" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>

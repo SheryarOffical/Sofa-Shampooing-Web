@@ -74,7 +74,7 @@ function AnimatedServiceContent() {
 
       {/* Description */}
       <p style={{ color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75, marginBottom: 32 }}>
-        From a single fabric sofa to a full living room — Al Haya brings certified cleaning professionals and professional-grade equipment directly to your home across Dubai, Sharjah &amp; Ajman.
+        Dubai&apos;s micro-dust particles settle deep into fabric fibers, acting like sandpaper on your upholstery. Al Haya&apos;s certified technicians use industrial-grade extraction and pH-balanced cleaners tailored to your specific fabric — protecting your investment and ensuring a healthy home across Dubai, Sharjah, Ajman &amp; Abu Dhabi.
       </p>
 
       {/* Stats */}
@@ -112,8 +112,8 @@ const services = [
     tag: 'Most Popular',
     tagColor: 'var(--accent)',
     title: 'Sofa Deep Cleaning',
-    desc: 'Powerful extraction removes embedded dust, allergens & tough stains from deep within every fiber. Restores your sofa to fresh, hygienic condition.',
-    features: ['Dust & allergen extraction', 'Deep stain treatment', 'Odor elimination', 'Fabric protection coat'],
+    desc: 'Dubai\'s fine micro-dust particles act like sandpaper deep inside fabric fibers. Our industrial extraction removes embedded desert dust, allergens & tough stains — restoring your sofa and extending its lifespan.',
+    features: ['Industrial power vacuuming', 'Allergen & bacteria extraction', 'Deep stain treatment', 'Fabric protection coat'],
     price: 'AED 99',
     href: '/services#deep-cleaning',
     bgImage: '/home/sofa-deep-cleaning.webp',
@@ -123,8 +123,8 @@ const services = [
     tag: 'Fast-Dry',
     tagColor: 'var(--accent)',
     title: 'Sofa Shampooing',
-    desc: 'Professional foam shampoo treatment lifts dirt & grime deep from fabric. Sofa ready within 2–4 hours with long-lasting freshness.',
-    features: ['Foam shampoo treatment', 'Stain lifting formula', 'Sanitization & deodorizing', 'Quick dry technology'],
+    desc: 'pH-balanced foam shampoo breaks down oils, grease and grime from skin contact deep within the fabric. Sofa ready within 2–4 hours — ideal for regular deep cleaning in UAE homes.',
+    features: ['pH-balanced shampoo formula', 'Oil & grease breakdown', 'Sanitization & deodorizing', 'Fast-dry technology'],
     price: 'AED 79',
     href: '/services#shampooing',
     bgImage: '/home/sofa-shampoo.webp',
@@ -134,8 +134,8 @@ const services = [
     tag: 'Specialist',
     tagColor: '#FF5A3C',
     title: 'Stain Removal',
-    desc: 'Targeted treatment for coffee, food, ink, and other stubborn stains that regular cleaning simply cannot remove.',
-    features: ['Coffee & tea stains', 'Ink & dye removal', 'Food & grease stains', 'Old set-in stains'],
+    desc: 'pH-balanced cleaners tailored to your specific fabric type lift coffee, food, ink and pet stains without causing discoloration or dye bleeding — for all upholstery types.',
+    features: ['Coffee, tea & food stains', 'Ink & dye removal', 'Pet accident treatment', 'Old set-in stains'],
     price: 'AED 49',
     href: '/contact',
     bgImage: '/home/stain.webp',
@@ -145,8 +145,8 @@ const services = [
     tag: 'Premium',
     tagColor: '#8B5CF6',
     title: 'Leather Sofa Cleaning',
-    desc: 'Specialist leather care using pH-balanced solutions, deep conditioning and protective coating to restore and preserve.',
-    features: ['pH-safe leather cleaner', 'Deep conditioning', 'Crack prevention', 'Protective coat finish'],
+    desc: 'Specialist pH-safe leather care prevents cracking in Dubai\'s climate. We condition, restore suppleness and apply a protective coat — preserving your leather sofa for years.',
+    features: ['pH-safe leather cleaner', 'Deep conditioning treatment', 'Crack & dryness prevention', 'Protective coat finish'],
     price: 'AED 129',
     href: '/contact',
     bgImage: '/home/leather.webp',
@@ -156,8 +156,8 @@ const services = [
     tag: 'Freshness',
     tagColor: '#0891B2',
     title: 'Odor Treatment',
-    desc: 'Eliminates deep-seated odors from pets, smoke, food and moisture permanently — not just masks them.',
-    features: ['Pet odor elimination', 'Smoke & food odors', 'Anti-bacterial treatment', 'Long-lasting freshness'],
+    desc: 'Dubai\'s humid climate lets odors linger deep within fabric fibers. Our eco-friendly deodorizers neutralize pet, smoke and food odors at the source — not just masked with perfume.',
+    features: ['Pet odor elimination', 'Smoke & food odors', 'Anti-bacterial treatment', 'Humidity-proof freshness'],
     price: 'AED 59',
     href: '/contact',
     bgImage: '/home/Odor-Treatment.webp',
@@ -178,8 +178,8 @@ const services = [
     tag: 'Hygienic',
     tagColor: '#059669',
     title: 'Sofa Sanitization',
-    desc: 'Hospital-grade disinfection kills 99.9% of bacteria, viruses and germs — completely safe for kids and pets.',
-    features: ['99.9% bacteria kill rate', 'Child & pet safe', 'No harsh chemicals', 'WHO-approved solutions'],
+    desc: 'High-temperature steam extraction kills 99.9% of bacteria, dust mites and germs — critical in Dubai\'s humid climate. WHO-approved solutions, completely safe for children and pets.',
+    features: ['99.9% bacteria kill rate', 'High-temp steam extraction', 'Child & pet safe', 'WHO-approved solutions'],
     price: 'AED 49',
     href: '/contact',
     bgImage: '/home/Sofa-Sanitization.webp',
@@ -189,8 +189,8 @@ const services = [
     tag: 'Delicate Care',
     tagColor: '#EC4899',
     title: 'Velvet & Microfiber',
-    desc: 'Gentle specialist cleaning for delicate velvet, microfiber and suede upholstery without any damage or shrinkage.',
-    features: ['Velvet-safe technique', 'Microfiber deep clean', 'Pile restoration', 'No shrinkage or fading'],
+    desc: 'Low-moisture techniques preserve velvet\'s soft texture, while microfiber gets a thorough deep clean. Specialist tools reach every curve of complex, sculptural sofa designs without shrinkage.',
+    features: ['Low-moisture velvet care', 'Microfiber deep clean', 'Pile restoration', 'No shrinkage or fading'],
     price: 'AED 99',
     href: '/contact',
     bgImage: '/home/Velvet-Microfiber.webp',
@@ -217,10 +217,10 @@ export default function ServicesPreview() {
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 56 }}>
           <div className="section-tag">Our Services</div>
           <h2 style={{ fontSize: 'clamp(32px, 4vw, 56px)', marginBottom: 16 }}>
-            Complete <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Sofa Care</span> Solutions
+            Professional <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Sofa Cleaning</span> Services in Dubai
           </h2>
-          <p style={{ color: 'var(--fg-muted)', maxWidth: 540, margin: '0 auto', fontSize: 17, lineHeight: 1.65 }}>
-            From deep cleaning to specialist leather care — we cover every sofa type and every cleaning need across Dubai, Sharjah &amp; Ajman.
+          <p style={{ color: 'var(--fg-muted)', maxWidth: 580, margin: '0 auto', fontSize: 17, lineHeight: 1.65 }}>
+            In Dubai, &ldquo;surface cleaning&rdquo; isn&apos;t enough. Fine desert dust settles deep into fabric fibers, while humidity locks in allergens and bacteria. Our certified technicians use industrial-grade extraction and pH-balanced cleaners to restore every sofa type across Dubai, Sharjah, Ajman &amp; Abu Dhabi.
           </p>
         </div>
 

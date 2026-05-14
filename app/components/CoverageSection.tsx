@@ -4,10 +4,18 @@ const areas = [
   {
     city: 'Dubai',
     emoji: '🏙️',
-    desc: 'All Dubai areas — Marina, JVC, Downtown, Deira, Bur Dubai, Jumeirah & more.',
+    desc: 'All Dubai areas — Marina, JVC, Downtown, Deira, Bur Dubai, Jumeirah, Palm Jumeirah & more.',
     tags: ['Marina', 'JVC', 'Downtown', 'Jumeirah', 'Deira'],
     accent: 'var(--accent)',
     gradient: 'linear-gradient(135deg, #003d4a 0%, #0B0B0B 100%)',
+  },
+  {
+    city: 'Abu Dhabi',
+    emoji: '🌃',
+    desc: 'Serving all Abu Dhabi areas — Khalifa City, Al Reem Island, Yas Island, Saadiyat Island & Al Muroor.',
+    tags: ['Khalifa City', 'Al Reem Island', 'Yas Island', 'Al Muroor'],
+    accent: '#3B82F6',
+    gradient: 'linear-gradient(135deg, #001a3d 0%, #0B0B0B 100%)',
   },
   {
     city: 'Sharjah',
@@ -44,7 +52,7 @@ export default function CoverageSection() {
         </div>
 
         {/* City Cards */}
-        <div className="coverage-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginBottom: 48 }}>
+        <div className="coverage-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, marginBottom: 48 }}>
           {areas.map((area, i) => (
             <div
               key={area.city}
@@ -177,7 +185,10 @@ export default function CoverageSection() {
       </div>
 
       <style jsx>{`
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+          .coverage-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 560px) {
           .coverage-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>

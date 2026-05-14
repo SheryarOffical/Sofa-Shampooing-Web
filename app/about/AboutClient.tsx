@@ -89,9 +89,9 @@ export default function AboutPage() {
                 </h2>
                 <div className="reveal reveal-delay-1" style={{ display: 'flex', flexDirection: 'column', gap: 16, color: 'var(--fg-muted)', fontSize: 16, lineHeight: 1.75 }}>
                   <p>Al Haya Sofa Care UAE was founded with one simple mission: to provide Dubai families and businesses with a professional, reliable, and convenient sofa cleaning experience — right at their doorstep.</p>
-                  <p>We understand that in today&apos;s fast-paced UAE lifestyle, your sofa is the heart of your home. It&apos;s where you relax, entertain guests, and spend quality time. Over time, it accumulates dust, allergens, and stains that regular vacuuming simply cannot remove.</p>
-                  <p>That&apos;s why we bring our professional-grade equipment and eco-friendly cleaning solutions directly to you. We handle every sofa type — fabric, leather, microfiber, velvet — with care and expertise, restoring them to a fresh, hygienic condition without disrupting your day.</p>
-                  <p>Today, Al Haya Sofa Care UAE proudly serves 500+ happy clients across Dubai, Sharjah, and Ajman with a 4.9-star rating and same-day service availability.</p>
+                  <p>In a city like Dubai, where luxury meets the desert, your home is your sanctuary. The combination of fine sand, high humidity, and daily use means your sofa — the centerpiece of your living room — acts like a giant filter for dust, allergens, and pollutants. Surface cleaning simply isn&apos;t enough.</p>
+                  <p>We bring professional-grade industrial equipment and eco-friendly solutions directly to you. Our certified technicians identify your upholstery type, test pH levels, and use cleaners specifically tailored to your fabric — preventing browning or dye bleeding while lifting deep-seated dirt.</p>
+                  <p>Today, Al Haya Sofa Care UAE proudly serves 500+ happy clients across Dubai, Sharjah, Ajman &amp; Abu Dhabi with a 4.9-star rating and same-day service availability.</p>
                 </div>
               </div>
               <div className="reveal reveal-delay-2">
@@ -143,6 +143,61 @@ export default function AboutPage() {
                   <div style={{ color: item.accent, marginBottom: 16 }}>{item.icon}</div>
                   <div style={{ fontSize: 17, marginBottom: 10, color: item.accent, fontWeight: 800, fontFamily: 'var(--font-display)', letterSpacing: '-0.02em' }}>{item.title}</div>
                   <p style={{ color: 'rgba(246,241,232,0.70)', fontSize: 14, lineHeight: 1.65 }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our Process */}
+        <section className="section" style={{ borderBottom: '1px solid var(--line)' }}>
+          <div className="container-x">
+            <div className="reveal" style={{ textAlign: 'center', marginBottom: 52 }}>
+              <div className="section-tag">How We Clean</div>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}>
+                Our Professional <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Cleaning Process</span>
+              </h2>
+              <p style={{ color: 'var(--fg-muted)', maxWidth: 520, margin: '16px auto 0', fontSize: 17, lineHeight: 1.65 }}>
+                A rigorous 4-step protocol to achieve like-new results on every sofa type across the UAE.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+              {[
+                {
+                  step: '01',
+                  title: 'Fabric Inspection & pH Testing',
+                  desc: 'We identify whether your upholstery is synthetic or natural fiber. pH-neutral solutions are selected for delicate fabrics to prevent browning or dye bleeding.',
+                  accent: 'var(--accent)',
+                },
+                {
+                  step: '02',
+                  title: 'Industrial Power Vacuuming',
+                  desc: 'High-suction industrial vacuums remove loose sand, soil and debris trapped deep within the padding — critical for Dubai\'s desert environment.',
+                  accent: '#FF5A3C',
+                },
+                {
+                  step: '03',
+                  title: 'Deep Shampooing & Steam Cleaning',
+                  desc: 'Dual-action approach: shampooing breaks down oils and grease; high-temperature steam kills 99% of bacteria and mites while lifting deep-seated dirt.',
+                  accent: '#3B82F6',
+                },
+                {
+                  step: '04',
+                  title: 'Sanitization & Deodorizing',
+                  desc: 'Eco-friendly deodorizers neutralize odors at the source — especially important in Dubai\'s humid climate. Sofa is dry and ready within 4–8 hours.',
+                  accent: '#10B981',
+                },
+              ].map((p, i) => (
+                <div key={p.step} className={`reveal reveal-delay-${i + 1}`} style={{
+                  background: '#141210',
+                  border: `1px solid ${p.accent}30`,
+                  borderTop: `3px solid ${p.accent}`,
+                  borderRadius: 16,
+                  padding: '28px 24px',
+                }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: p.accent, letterSpacing: '0.1em', marginBottom: 12, textTransform: 'uppercase' }}>Step {p.step}</div>
+                  <div style={{ fontSize: 17, fontWeight: 800, color: p.accent, fontFamily: 'var(--font-display)', marginBottom: 12, letterSpacing: '-0.02em' }}>{p.title}</div>
+                  <p style={{ color: 'rgba(246,241,232,0.70)', fontSize: 14, lineHeight: 1.65 }}>{p.desc}</p>
                 </div>
               ))}
             </div>

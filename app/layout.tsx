@@ -107,6 +107,41 @@ export const metadata: Metadata = {
     'تنظيف كنب ابوظبي',
     'تنظيف كنب الشارقة',
     'تنظيف انتريه دبي',
+    // Location-specific long-tail
+    'best sofa cleaning services in Dubai Marina',
+    'professional upholstery cleaning Business Bay Dubai',
+    'sofa deep cleaning price in JLT',
+    'eco-friendly sofa shampooing in Palm Jumeirah',
+    'top-rated couch cleaners near Arabian Ranches',
+    'same day sofa cleaning service in Al Barsha',
+    'cheap sofa cleaning company in Mirdif',
+    'professional furniture cleaning Downtown Dubai',
+    // Service & technique long-tail
+    'steam sofa cleaning services for dust mites Dubai',
+    'professional sofa shampooing and sanitization UAE',
+    'furniture deep cleaning for allergy sufferers Dubai',
+    'non-toxic sofa cleaning for homes with kids',
+    'professional couch dry cleaning for delicate fabrics',
+    'sofa sanitization and disinfection service Dubai',
+    'industrial power vacuuming for sofas Dubai',
+    // Fabric-specific long-tail
+    'professional leather sofa cleaning and conditioning Dubai',
+    'microfiber couch deep cleaning service UAE',
+    'safe cleaning for silk and wool upholstery Dubai',
+    'L-shaped sofa deep cleaning cost Dubai',
+    '7 seater sofa shampooing price UAE',
+    'viscose couch cleaning specialists in Dubai',
+    // Problem-solving long-tail
+    'how to remove pet urine smell from sofa Dubai',
+    'professional coffee stain removal for upholstery Dubai',
+    'emergency sofa cleaning for red wine stains Dubai',
+    'sofa odor treatment for cigarette smoke removal UAE',
+    'restoring old leather sofa shine professional service',
+    // Intent & comparison long-tail
+    'compare sofa cleaning prices in Dubai 2026',
+    'sofa cleaning vs reupholstery cost comparison Dubai',
+    'sofa fabric protection service vs DIY sprays UAE',
+    'is professional couch cleaning worth it Dubai',
   ],
   authors: [{ name: 'Al Haya Sofa Care UAE', url: 'https://sofashampooingdubai.com' }],
   creator: 'Al Haya Sofa Care UAE',
@@ -220,43 +255,43 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
+      name: 'How often should a sofa be professionally cleaned in Dubai?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Due to Dubai\'s high dust levels and humidity, we recommend a professional deep clean every 6 to 12 months. If you have pets or children, a 6-month interval is ideal to remove allergens, bacteria and embedded desert dust.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is professional sofa cleaning worth it in Dubai?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Professional sofa cleaning in Dubai removes the abrasive micro-dust particles that break down fabric fibers over time, extending your furniture\'s lifespan by years. It also eliminates allergens and bacteria that standard household vacuums cannot reach.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does sofa cleaning take to dry in UAE?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Thanks to our high-powered extraction systems, most sofas are dry and ready to use within 4 to 8 hours. For thicker materials or natural fibers, it may take up to 12 hours depending on airflow and AC settings in your home.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you clean delicate fabrics like velvet or leather?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. We use specialist low-moisture techniques for velvet to maintain its soft texture, and pH-balanced conditioning treatments for leather to prevent cracking and dryness. All delicate fabric types are handled with expert care.' },
+    },
+    {
+      '@type': 'Question',
       name: 'How much does sofa cleaning cost in Dubai?',
       acceptedAnswer: { '@type': 'Answer', text: 'Sofa cleaning in Dubai starts from AED 39 for pet hair removal, AED 79 for shampooing, AED 89 for steam cleaning, and AED 99 for deep cleaning. Leather sofa cleaning starts from AED 129. All prices include at-home doorstep service.' },
     },
     {
       '@type': 'Question',
-      name: 'Do you offer sofa cleaning in Abu Dhabi?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE provides professional sofa deep shampoo and steam cleaning services across Abu Dhabi including Khalifa City, Al Reem Island, Yas Island, Saadiyat Island, Al Muroor and more. WhatsApp +971547199189 to book.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does sofa cleaning take in UAE?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most sofa cleaning jobs take 1-3 hours depending on the size. Your sofa will be dry and ready to use within 2-4 hours after shampooing or steam cleaning.' },
-    },
-    {
-      '@type': 'Question',
       name: 'Do you offer same-day sofa cleaning across UAE?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE offers same-day sofa cleaning across Dubai, Sharjah, Ajman, Abu Dhabi, Al Ain and Ras Al Khaimah. WhatsApp us at +971547199189 to book your same-day slot.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which areas in Dubai do you cover for sofa cleaning?',
-      acceptedAnswer: { '@type': 'Answer', text: 'We cover all areas of Dubai including JVC, Downtown Dubai, Business Bay, Al Barsha, Jumeirah, Deira, Bur Dubai, Dubai Marina, JBR, Palm Jumeirah, Dubai Hills, Silicon Oasis, and Mirdif.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Al Haya Sofa Care UAE offers same-day sofa cleaning across Dubai, Sharjah, Ajman and Abu Dhabi. WhatsApp us at +971547199189 to book your same-day slot.' },
     },
     {
       '@type': 'Question',
       name: 'What is the difference between sofa shampoo cleaning and steam cleaning?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sofa shampoo cleaning uses professional foam shampoo to lift embedded dirt and stains from fabric fibers — ideal for general deep cleaning. Steam cleaning uses high-temperature vapor to sanitize and disinfect, killing 99.9% of bacteria and germs — ideal for hygiene-focused cleaning or homes with babies and pets. Al Haya Sofa Care UAE offers both methods and can combine them for best results.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Sofa shampoo cleaning uses pH-balanced foam shampoo to break down oils, grease and embedded dirt — ideal for general deep cleaning. Steam cleaning uses high-temperature vapor to sanitize and disinfect, killing 99.9% of bacteria and dust mites — ideal for hygiene-focused cleaning or homes with babies and pets. Al Haya Sofa Care UAE offers both methods and can combine them for best results.' },
     },
     {
       '@type': 'Question',
       name: 'Are your sofa cleaning products safe for children and pets?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes, all our cleaning products are eco-friendly, non-toxic and completely safe for children and pets. We use premium, biodegradable shampoos specifically formulated for delicate upholstery fabrics.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you clean leather sofas in UAE?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer specialist leather sofa cleaning using pH-balanced solutions, deep conditioning and protective coating to restore and preserve your leather sofa. Service available across Dubai, Sharjah, Ajman and Abu Dhabi starting from AED 129.' },
     },
   ],
 };
