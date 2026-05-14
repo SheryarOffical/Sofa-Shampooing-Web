@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const areas = [
   {
     city: 'Dubai',
     href: '/sofa-cleaning-dubai',
-    emoji: '🏙️',
+    image: '/cities/dubai.webp',
     desc: 'All Dubai areas — Marina, JVC, Downtown, Deira, Bur Dubai, Jumeirah, Palm Jumeirah & more.',
     tags: ['Marina', 'JVC', 'Downtown', 'Jumeirah', 'Deira'],
     accent: 'var(--accent)',
@@ -13,7 +14,7 @@ const areas = [
   {
     city: 'Abu Dhabi',
     href: '/sofa-cleaning-abu-dhabi',
-    emoji: '🌃',
+    image: '/cities/abu-dhabi.webp',
     desc: 'Serving all Abu Dhabi areas — Khalifa City, Al Reem Island, Yas Island, Saadiyat Island & Al Muroor.',
     tags: ['Khalifa City', 'Al Reem Island', 'Yas Island', 'Al Muroor'],
     accent: '#3B82F6',
@@ -22,7 +23,7 @@ const areas = [
   {
     city: 'Sharjah',
     href: '/sofa-cleaning-sharjah',
-    emoji: '🌆',
+    image: '/cities/sharjah.webp',
     desc: 'Covering all Sharjah neighborhoods — Al Nahda, Al Majaz, Al Qasimia & surrounding areas.',
     tags: ['Al Nahda', 'Al Majaz', 'Al Qasimia', 'Muwaileh'],
     accent: '#D9F15A',
@@ -31,7 +32,7 @@ const areas = [
   {
     city: 'Ajman',
     href: '/sofa-cleaning-ajman',
-    emoji: '🏘️',
+    image: '/cities/ajman.webp',
     desc: 'Full coverage in Ajman — Al Nuaimiya, Al Rashidiya, Al Jurf & all residential areas.',
     tags: ['Al Nuaimiya', 'Al Rashidiya', 'Al Jurf', 'Al Hamidiya'],
     accent: '#FF5A3C',
@@ -63,12 +64,9 @@ export default function CoverageSection() {
               className={`reveal reveal-delay-${i + 1}`}
               style={{
                 borderRadius: 20,
-                background: area.gradient,
                 border: `1px solid ${area.accent}30`,
-                padding: '36px 28px',
                 position: 'relative',
                 overflow: 'hidden',
-                cursor: 'default',
                 transition: 'transform 0.25s, box-shadow 0.25s',
               }}
               onMouseEnter={e => {
@@ -80,74 +78,75 @@ export default function CoverageSection() {
                 (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
               }}
             >
-              {/* Glow orb */}
-              <div style={{
-                position: 'absolute', top: -40, right: -40,
-                width: 160, height: 160, borderRadius: '50%',
-                background: `radial-gradient(circle, ${area.accent}25, transparent 70%)`,
-                pointerEvents: 'none',
-              }}/>
-
-              {/* Emoji + City */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+              {/* City Image */}
+              <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
+                <Image
+                  src={area.image}
+                  alt={`Sofa cleaning service in ${area.city} UAE`}
+                  fill
+                  sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 25vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
                 <div style={{
-                  width: 56, height: 56, borderRadius: 14,
-                  background: `${area.accent}18`,
-                  border: `1px solid ${area.accent}40`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 26, flexShrink: 0,
+                  position: 'absolute', inset: 0,
+                  background: `linear-gradient(to bottom, rgba(11,11,11,0.1) 0%, rgba(11,11,11,0.7) 100%)`,
+                }}/>
+                {/* City name over image */}
+                <div style={{
+                  position: 'absolute', bottom: 14, left: 16,
+                  fontFamily: 'var(--font-display)', fontWeight: 900,
+                  fontSize: 24, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1,
+                }}>{area.city}</div>
+                <div style={{
+                  position: 'absolute', bottom: 14, right: 14,
+                  fontFamily: 'var(--font-mono)', fontSize: 9,
+                  color: area.accent, letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  background: `${area.accent}20`,
+                  border: `1px solid ${area.accent}50`,
+                  padding: '3px 8px', borderRadius: 4,
+                }}>Available Now</div>
+              </div>
+
+              {/* Card content */}
+              <div style={{ padding: '20px 22px', background: area.gradient }}>
+                {/* Desc */}
+                <p style={{ color: 'rgba(246,241,232,0.65)', fontSize: 13, lineHeight: 1.65, marginBottom: 16 }}>
+                  {area.desc}
+                </p>
+
+                {/* Area tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
+                  {area.tags.map(tag => (
+                    <span key={tag} style={{
+                      fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600,
+                      padding: '3px 10px', borderRadius: 999,
+                      background: `${area.accent}15`,
+                      border: `1px solid ${area.accent}35`,
+                      color: area.accent,
+                      letterSpacing: '0.04em',
+                    }}>{tag}</span>
+                  ))}
+                </div>
+
+                {/* Bottom status + link */}
+                <div style={{
+                  paddingTop: 14,
+                  borderTop: `1px solid ${area.accent}20`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8,
                 }}>
-                  {area.emoji}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#25D366', display: 'inline-block', flexShrink: 0 }}/>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'rgba(246,241,232,0.5)' }}>Same-day</span>
+                  </div>
+                  <Link href={area.href} style={{
+                    fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600,
+                    color: area.accent, textDecoration: 'none',
+                    padding: '4px 10px', borderRadius: 6,
+                    border: `1px solid ${area.accent}40`,
+                    background: `${area.accent}10`,
+                  }}>View Page</Link>
                 </div>
-                <div>
-                  <div style={{
-                    fontFamily: 'var(--font-display)', fontWeight: 900,
-                    fontSize: 26, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1,
-                  }}>{area.city}</div>
-                  <div style={{
-                    fontFamily: 'var(--font-mono)', fontSize: 10,
-                    color: area.accent, letterSpacing: '0.1em',
-                    textTransform: 'uppercase', marginTop: 4,
-                  }}>UAE ◆ Available Now</div>
-                </div>
-              </div>
-
-              {/* Desc */}
-              <p style={{ color: 'rgba(246,241,232,0.65)', fontSize: 14, lineHeight: 1.65, marginBottom: 20 }}>
-                {area.desc}
-              </p>
-
-              {/* Area tags */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                {area.tags.map(tag => (
-                  <span key={tag} style={{
-                    fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600,
-                    padding: '3px 10px', borderRadius: 999,
-                    background: `${area.accent}15`,
-                    border: `1px solid ${area.accent}35`,
-                    color: area.accent,
-                    letterSpacing: '0.04em',
-                  }}>{tag}</span>
-                ))}
-              </div>
-
-              {/* Bottom status + link */}
-              <div style={{
-                marginTop: 24, paddingTop: 16,
-                borderTop: `1px solid ${area.accent}20`,
-                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8,
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#25D366', display: 'inline-block', flexShrink: 0 }}/>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'rgba(246,241,232,0.5)' }}>Same-day available</span>
-                </div>
-                <Link href={area.href} style={{
-                  fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600,
-                  color: area.accent, textDecoration: 'none',
-                  padding: '4px 10px', borderRadius: 6,
-                  border: `1px solid ${area.accent}40`,
-                  background: `${area.accent}10`,
-                }}>View Page →</Link>
               </div>
             </div>
           ))}
@@ -160,15 +159,12 @@ export default function CoverageSection() {
           padding: '28px 36px', borderRadius: 16,
           background: 'var(--bg-raised)', border: '1px solid var(--line-strong)',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-            <span style={{ fontSize: 32 }}>📍</span>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: 17, color: 'var(--fg)', marginBottom: 4 }}>
-                Not sure if we cover your area?
-              </div>
-              <div style={{ color: 'var(--fg-muted)', fontSize: 14 }}>
-                WhatsApp us your location — we'll confirm in minutes.
-              </div>
+          <div>
+            <div style={{ fontWeight: 700, fontSize: 17, color: 'var(--fg)', marginBottom: 4 }}>
+              Not sure if we cover your area?
+            </div>
+            <div style={{ color: 'var(--fg-muted)', fontSize: 14 }}>
+              WhatsApp us your location — we&apos;ll confirm in minutes.
             </div>
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -190,7 +186,7 @@ export default function CoverageSection() {
               Check My Area
             </a>
             <Link href="/contact" className="btn btn-primary" style={{ fontSize: 14 }}>
-              Book Now →
+              Book Now
             </Link>
           </div>
         </div>
