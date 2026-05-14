@@ -39,14 +39,19 @@ export default function Hero() {
   return (
     <section id="hero" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', borderBottom: '1px solid var(--line)', background: '#0B0B0B' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: '#0B0B0B' }}>
-        <img
-          src="/hero-sofa.webp"
-          alt="Professional sofa deep shampoo and steam cleaning service at home in Dubai UAE — Al Haya Sofa Care"
-          fetchPriority="high"
-          decoding="async"
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 1 }}
-        />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(11,11,11,0.45) 0%, rgba(11,11,11,0.25) 55%, rgba(11,11,11,0.10) 100%)' }}/>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/hero-sofa.webp"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+        >
+          <source src="/hero-bg.webm" type="video/webm" />
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, rgba(11,11,11,0.60) 0%, rgba(11,11,11,0.40) 55%, rgba(11,11,11,0.25) 100%)' }}/>
         <div className="grid-bg" style={{ position: 'absolute', inset: 0 }}/>
       </div>
 
@@ -102,6 +107,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 640px) {
+          .hero-stats { grid-template-columns: repeat(2, 1fr) !important; max-width: 280px !important; }
+        }
+      `}</style>
     </section>
   );
 }
