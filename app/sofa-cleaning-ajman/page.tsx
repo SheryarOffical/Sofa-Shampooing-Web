@@ -150,6 +150,31 @@ export default function SofaCleaningAjman() {
           </div>
         </section>
 
+        {/* Services Section */}
+        <section className="section" style={{ borderBottom: '1px solid var(--line)', background: 'var(--bg-elev)' }}>
+          <div className="container-x">
+            <div style={{ textAlign: 'center', marginBottom: 40 }}>
+              <div className="section-tag">Sofa Cleaning Services Ajman</div>
+              <h2 style={{ fontSize: 'clamp(24px, 3vw, 42px)', marginBottom: 12 }}>
+                Our Sofa Cleaning Services in <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Ajman</span>
+              </h2>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+              {[
+                { title: 'Sofa Deep Cleaning Ajman', desc: 'Industrial extraction removes embedded dust, allergens and bacteria from every sofa type across Ajman.', color: 'var(--accent)' },
+                { title: 'Sofa Shampooing Ajman', desc: 'Professional foam shampoo treatment lifts deep grime and stains. Fast-dry formula — ready in 2–4 hours.', color: '#F59E0B' },
+                { title: 'Pet Hair Removal Ajman', desc: 'Specialist vacuum and roller treatment removes embedded pet hair from all cushions and seams.', color: '#D97706' },
+                { title: 'Sofa Sanitization Ajman', desc: 'Hospital-grade disinfection kills 99.9% of bacteria and germs. Safe for children and pets.', color: '#059669' },
+              ].map((s) => (
+                <div key={s.title} style={{ background: '#141210', border: `1px solid ${s.color}30`, borderTop: `3px solid ${s.color}`, borderRadius: 14, padding: '22px 20px' }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 800, color: s.color, fontFamily: 'var(--font-display)', marginBottom: 10 }}>{s.title}</h3>
+                  <p style={{ color: 'rgba(246,241,232,0.65)', fontSize: 13, lineHeight: 1.65 }}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="section-sm">
           <div className="container-x">
             <div style={{ textAlign: 'center', padding: '48px 24px', background: 'var(--bg-elev)', borderRadius: 20, border: '1px solid var(--line-strong)' }}>

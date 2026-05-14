@@ -6,6 +6,8 @@ import ServiceCoverageSection from './components/ServiceCoverageSection';
 import CTABanner from './components/CTABanner';
 import MarqueeBanner from './components/MarqueeBanner';
 import ServeDubaiSection from './components/ServeDubaiSection';
+import MapSection from './components/MapSection';
+import CitiesSection from './components/CitiesSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollRevealInit from './components/ScrollRevealInit';
@@ -19,8 +21,10 @@ export default function Home() {
         <MarqueeBanner />
         <ServicesPreview />
         <WhyChooseUs />
+        <CitiesSection />
         <ServiceCoverageSection />
         <ServeDubaiSection />
+        <MapSection />
         <CTABanner />
       </main>
       <Footer />

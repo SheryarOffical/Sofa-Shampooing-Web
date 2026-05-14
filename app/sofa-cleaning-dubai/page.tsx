@@ -237,6 +237,31 @@ export default function SofaCleaningDubai() {
           </div>
         </section>
 
+        {/* Services Section */}
+        <section className="section" style={{ borderBottom: '1px solid var(--line)', background: 'var(--bg-elev)' }}>
+          <div className="container-x">
+            <div style={{ textAlign: 'center', marginBottom: 40 }}>
+              <div className="section-tag">Sofa Cleaning Services Dubai</div>
+              <h2 style={{ fontSize: 'clamp(24px, 3vw, 42px)', marginBottom: 12 }}>
+                Our Sofa Cleaning Services in <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Dubai</span>
+              </h2>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+              {[
+                { title: 'Sofa Deep Cleaning Dubai', desc: 'Industrial extraction removes Dubai\'s fine micro-dust, allergens and deep stains. Most popular sofa cleaning Dubai service.', color: 'var(--accent)' },
+                { title: 'Sofa Shampooing Dubai', desc: 'pH-balanced foam shampoo lifts oil, grease and grime. Fast-dry formula — sofa ready in 2–4 hours across Dubai.', color: '#0891B2' },
+                { title: 'Leather Sofa Cleaning Dubai', desc: 'Specialist pH-safe leather care prevents cracking in Dubai\'s heat. Conditioning and protective coat finish.', color: '#8B5CF6' },
+                { title: 'Sofa Stain Removal Dubai', desc: 'Coffee, red wine, pet stains — removed safely without discoloration from all sofa fabrics across Dubai.', color: '#FF5A3C' },
+              ].map((s) => (
+                <div key={s.title} style={{ background: '#141210', border: `1px solid ${s.color}30`, borderTop: `3px solid ${s.color}`, borderRadius: 14, padding: '22px 20px' }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 800, color: s.color, fontFamily: 'var(--font-display)', marginBottom: 10 }}>{s.title}</h3>
+                  <p style={{ color: 'rgba(246,241,232,0.65)', fontSize: 13, lineHeight: 1.65 }}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="section-sm" style={{ borderBottom: '1px solid var(--line)' }}>
           <div className="container-x">

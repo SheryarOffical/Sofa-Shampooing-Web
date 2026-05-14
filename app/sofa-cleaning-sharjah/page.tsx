@@ -152,6 +152,31 @@ export default function SofaCleaningSharjah() {
           </div>
         </section>
 
+        {/* Services Section */}
+        <section className="section" style={{ borderBottom: '1px solid var(--line)', background: 'var(--bg-elev)' }}>
+          <div className="container-x">
+            <div style={{ textAlign: 'center', marginBottom: 40 }}>
+              <div className="section-tag">Sofa Cleaning Services Sharjah</div>
+              <h2 style={{ fontSize: 'clamp(24px, 3vw, 42px)', marginBottom: 12 }}>
+                Our Sofa Cleaning Services in <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--accent)' }}>Sharjah</span>
+              </h2>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+              {[
+                { title: 'Sofa Deep Cleaning Sharjah', desc: 'Industrial extraction removes embedded dust, allergens and stains from all sofa types across Sharjah.', color: 'var(--accent)' },
+                { title: 'Sofa Shampooing Sharjah', desc: 'pH-balanced foam shampoo lifts deep grime. Sofa ready in 2–4 hours. Available same-day in Sharjah.', color: '#0891B2' },
+                { title: 'Leather Sofa Cleaning Sharjah', desc: 'Specialist pH-safe leather conditioning and protective coat. Prevents cracking in Sharjah\'s climate.', color: '#8B5CF6' },
+                { title: 'Sofa Stain Removal Sharjah', desc: 'Coffee, food, ink and pet stains removed safely from all fabric types across all Sharjah areas.', color: '#FF5A3C' },
+              ].map((s) => (
+                <div key={s.title} style={{ background: '#141210', border: `1px solid ${s.color}30`, borderTop: `3px solid ${s.color}`, borderRadius: 14, padding: '22px 20px' }}>
+                  <h3 style={{ fontSize: 16, fontWeight: 800, color: s.color, fontFamily: 'var(--font-display)', marginBottom: 10 }}>{s.title}</h3>
+                  <p style={{ color: 'rgba(246,241,232,0.65)', fontSize: 13, lineHeight: 1.65 }}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="section-sm">
           <div className="container-x">
